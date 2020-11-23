@@ -24,7 +24,7 @@ class SignUp extends React.Component {
 
         const { displayName, email, password, confirmPassword } = this.state;
 
-        if(password & confirmPassword) {
+        if(password && confirmPassword) {
             alert("passwords don't match");
             return;
         }
@@ -71,7 +71,7 @@ class SignUp extends React.Component {
                      onChange={this.handleChange} label='Email' required />
                       <FormInput type='password' name='password' value={password}
                      onChange={this.handleChange} label='Password' required />
-                      <FormInput type='password' name='ConfirmPassword' value={confirmPassword}
+                      <FormInput type='confirmpassword' name='confirmPassword' value={confirmPassword}
                      onChange={this.handleChange} label='Confirm Password' required /> 
                      <CustomButton type='submit'>SIGN UP</CustomButton>
                 </form>
